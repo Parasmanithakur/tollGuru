@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./component/LandingPage";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Routes path="/*" element={<LandingPage />} />
+          <Route path="tollGuru/*" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
     </div>
