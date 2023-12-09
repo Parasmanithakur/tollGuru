@@ -8,7 +8,6 @@ const InputCities = () => {
     from: "",
   });
   const setdata = (e) => {
-    console.log(e.target.value);
     const { name, value } = e.target;
     setAddress((preval) => {
       return {
@@ -18,7 +17,9 @@ const InputCities = () => {
     });
   };
   const handleSubmit = async (e) => {
-    calculateToll(address.from, address.to);
+    calculateToll(address.from, address.to)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
   return (
     <>
